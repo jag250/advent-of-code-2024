@@ -40,13 +40,10 @@ def check_mas(grid, i, j):
 
 def part1(f):
     grid = [line.strip() for line in f]
-
     res = 0
-
     for i in range(len(grid)):
         for j in range(len(grid[0])):
             if grid[i][j] == 'X':
-                # Clockwise order
                 res += check_dir(grid, i, j, -1, 0)
                 res += check_dir(grid, i, j, 0, -1)
                 res += check_dir(grid, i, j, -1, -1)
@@ -55,6 +52,7 @@ def part1(f):
                 res += check_dir(grid, i, j, 1, 0)
                 res += check_dir(grid, i, j, -1, 1)
                 res += check_dir(grid, i, j, 1, -1)
+                
     return res
                 
 

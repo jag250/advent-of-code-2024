@@ -1,0 +1,6 @@
+[project]
+name = "advent-of-code-2024"
+version = "0.1.0"
+
+[project.scripts]
+aoc = "advent_of_code_2024.__main__:main"
